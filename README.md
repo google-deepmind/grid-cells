@@ -23,6 +23,16 @@ step.
 The dataset needed to run this code can be downloaded from
 [here](https://console.cloud.google.com/storage/browser/grid-cells-datasets).
 
+Note that you will need to download the data files with [gsutil](https://cloud.google.com/storage/docs/gsutil_install) using the [cp](https://cloud.google.com/storage/docs/gsutil/commands/cp) command. When you have set gsutil up, you can download the files with a command similar to
+
+    gsutil -m cp -r gs://grid-cells-datasets .
+
+The files then need to have the directory structure
+
+    grid-cells/datasets/square_room_100steps_2.2m_1000000/0000-of-0099.tfrecord
+
+and so on. 
+
 The files contained in the repository are the following:
 
 *   `train.py` is where the training and logging loop happen; The file comes
